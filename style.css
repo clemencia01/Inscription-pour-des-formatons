@@ -1,5 +1,31 @@
 
-    :root {
+
+.close, .prev, .next {
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+}
+
+.close {
+  top: 20px;
+  right: 30px;
+}
+
+.prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+   
+   :root {
       --orange-primary: #ff8a00;
       --orange-secondary: #ffb347;
       --blue-primary: #0d47a1;
