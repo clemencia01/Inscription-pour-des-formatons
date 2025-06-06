@@ -340,51 +340,110 @@
   </section> -->
 
   <!-- Contact Section -->
-  <section id="contact" class="py-5 contact-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Contactez-nous</h2>
-        <p class="text-muted">Pour toute information, n'hésitez pas à nous contacter</p>
-      </div>
+ <!-- Contact Section -->
+<section id="contact" class="py-5 contact-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contactez-nous</h2>
+      <p class="text-muted">Pour toute information, n'hésitez pas à nous contacter</p>
+    </div>
 
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <div class="text-center mb-4">
-            <div class="d-flex justify-content-center align-items-center gap-2">
-              <a href="tel:+22891699261" class="btn btn-outline-secondary rounded-circle">
-                <i class="bi bi-telephone"></i>
-              </a>
-              <a href="https://wa.me/22891699261" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary rounded-circle">
-                <i class="bi bi-chat-dots"></i>
-              </a>
-              <span class="fs-5 fw-medium ms-2">+228 91 69 92 61</span>
-            </div>
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        <div class="text-center mb-4">
+          <div class="d-flex justify-content-center align-items-center gap-2">
+            <a href="tel:+22891699261" class="btn btn-outline-secondary rounded-circle">
+              <i class="bi bi-telephone"></i>
+            </a>
+            <a href="https://wa.me/22891699261" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary rounded-circle">
+              <i class="bi bi-chat-dots"></i>
+            </a>
+            <span class="fs-5 fw-medium ms-2">+228 91 69 92 61</span>
           </div>
+        </div>
 
-          <div class="card shadow-sm">
-            <div class="card-body p-4">
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nom</label>
-                  <input type="text" class="form-control" id="name" placeholder="Votre nom">
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Votre email">
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-orange w-100">Envoyer</button>
-              </form>
-            </div>
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="fw-bold mb-4">Formulaire d'inscription</h3>
+            <form id="inscriptionForm">
+              <div class="mb-3">
+                <label for="inscriptionName" class="form-label">Nom complet</label>
+                <input type="text" class="form-control" id="inscriptionName" name="name" placeholder="Votre nom complet" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Numéro de téléphone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ex: +228 91 69 92 61" pattern="\+?[0-9]{10,12}" required>
+              </div>
+              <div class="mb-3">
+                <label for="userLocation" class="form-label">Localisation</label>
+                <input type="text" class="form-control" id="userLocation" name="userLocation" placeholder="Ex: Lomé, Kara, Kpalimé" required>
+              </div>
+              <div class="mb-3">
+                <label for="paymentMethod" class="form-label">Moyen de paiement</label>
+                <select class="form-control" id="paymentMethod" name="paymentMethod" required>
+                  <option value="">Sélectionnez un moyen de paiement</option>
+                  <option value="Espèces">Espèces</option>
+                  <option value="Mobile Money (Tmoney)">Mobile Money (Tmoney)</option>
+                  <option value="Mobile Money (Flooz)">Mobile Money (Flooz)</option>
+                  <option value="Virement bancaire">Virement bancaire</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="formation" class="form-label">Formation choisie</label>
+                <select class="form-control" id="formation" name="formation" required>
+                  <option value="">Sélectionnez une formation</option>
+                  <option value="4-6 Juillet 2025">Formation du 4 au 6 Juillet 2025</option>
+                  <option value="16 Février - 16 Mars 2025">Formation du 16 Février au 16 Mars 2025</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="format" class="form-label">Format de la formation</label>
+                <select class="form-control" id="format" name="format" required>
+                  <option value="">Sélectionnez un format</option>
+                  <option value="En présentiel">En présentiel</option>
+                  <option value="En ligne">En ligne</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="reason" class="form-label">Pourquoi voulez-vous rejoindre cette formation ?</label>
+                <textarea class="form-control" id="reason" name="reason" rows="4" placeholder="Ex: Je veux apprendre à créer des sacs en perles pour lancer mon activité" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="experience" class="form-label">Niveau d'expérience</label>
+                <select class="form-control" id="experience" name="experience" required>
+                  <option value="">Sélectionnez votre niveau</option>
+                  <option value="Débutant">Débutant (aucune expérience)</option>
+                  <option value="Intermédiaire">Intermédiaire (quelques bases)</option>
+                  <option value="Avancé">Avancé (expérience en artisanat)</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="internship" class="form-label">Souhaitez-vous suivre un stage de perfectionnement après la formation ?</label>
+                <select class="form-control" id="internship" name="internship" required>
+                  <option value="">Sélectionnez une option</option>
+                  <option value="Oui">Oui</option>
+                  <option value="Non">Non</option>
+                  <option value="Peut-être">Peut-être</option>
+                </select>
+              </div>
+              <div class="mb-3" id="internshipDurationContainer" style="display: none;">
+                <label for="internshipDuration" class="form-label">Durée du stage de perfectionnement</label>
+                <select class="form-control" id="internshipDuration" name="internshipDuration">
+                  <option value="">Sélectionnez une durée</option>
+                  <option value="1 mois">1 mois</option>
+                  <option value="2 mois">2 mois</option>
+                  <option value="3 mois">3 mois</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-orange w-100">S'inscrire via WhatsApp</button>
+            </form>
+            <div id="inscriptionResult" class="mt-3"></div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <!-- Footer -->
   <footer class="py-4 bg-light border-top">
     <div class="container">
@@ -418,11 +477,177 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <!-- Custom JavaScript -->
   <script>
+    
+
+// WhatsApp Button Functionality for Course Cards
+document.querySelectorAll('.whatsapp-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    console.log('Bouton WhatsApp des cartes cliqué');
+    const message = this.getAttribute('data-message');
+    const phoneNumber = '22891699261';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  });
+});
+
+// Inscription Form Functionality
+try {
+  console.log('Script du formulaire chargé');
+
+  // Gérer l'affichage conditionnel du champ de durée du stage
+  const internshipSelect = document.getElementById('internship');
+  const internshipDurationContainer = document.getElementById('internshipDurationContainer');
+  const internshipDuration = document.getElementById('internshipDuration');
+
+  if (internshipSelect && internshipDurationContainer && internshipDuration) {
+    console.log('Éléments internship trouvés');
+    internshipSelect.addEventListener('change', function() {
+      console.log('Changement dans le champ internship:', this.value);
+      if (this.value === 'Oui') {
+        internshipDurationContainer.style.display = 'block';
+        internshipDuration.setAttribute('required', 'required');
+      } else {
+        internshipDurationContainer.style.display = 'none';
+        internshipDuration.removeAttribute('required');
+        internshipDuration.value = '';
+      }
+    });
+  } else {
+    console.error("Éléments manquants: internship=", !!internshipSelect, "internshipDurationContainer=", !!internshipDurationContainer, "internshipDuration=", !!internshipDuration);
+  }
+
+  // Gérer la soumission du formulaire
+  const form = document.getElementById('inscriptionForm');
+  if (form) {
+    console.log('Formulaire trouvé');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      console.log('Soumission du formulaire déclenchée');
+
+      // Récupérer les éléments des champs
+      const fields = {
+        inscriptionName: document.getElementById('inscriptionName'),
+        phone: document.getElementById('phone'),
+        userLocation: document.getElementById('userLocation'),
+        paymentMethod: document.getElementById('paymentMethod'),
+        formation: document.getElementById('formation'),
+        format: document.getElementById('format'),
+        reason: document.getElementById('reason'),
+        experience: document.getElementById('experience'),
+        internship: document.getElementById('internship'),
+        internshipDuration: document.getElementById('internshipDuration')
+      };
+
+      // Vérifier que tous les champs existent
+      for (const [key, element] of Object.entries(fields)) {
+        if (!element) {
+          console.error(`Champ ${key} manquant dans le DOM`);
+          document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Erreur: le champ ' + key + ' est introuvable.</p>';
+          return;
+        }
+      }
+
+      // Récupérer les valeurs
+      const values = {
+        name: fields.inscriptionName.value,
+        phone: fields.phone.value,
+        userLocation: fields.userLocation.value,
+        paymentMethod: fields.paymentMethod.value,
+        formation: fields.formation.value,
+        format: fields.format.value,
+        reason: fields.reason.value,
+        experience: fields.experience.value,
+        internship: fields.internship.value,
+        internshipDuration: fields.internshipDuration.value
+      };
+      console.log('Valeurs des champs:', values);
+
+      // Vérifier que les champs requis ne sont pas vides
+      const requiredFields = ['name', 'phone', 'userLocation', 'paymentMethod', 'formation', 'format', 'reason', 'experience', 'internship'];
+      for (const field of requiredFields) {
+        if (!values[field]) {
+          console.error(`Champ requis vide: ${field}`);
+          document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Veuillez remplir le champ ' + field + '.</p>';
+          return;
+        }
+      }
+
+      // Valider le numéro de téléphone
+      const phoneRegex = /\+?[0-9]{10,12}/;
+      if (!phoneRegex.test(values.phone)) {
+        document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Veuillez entrer un numéro de téléphone valide.</p>';
+        console.error('Numéro de téléphone invalide:', values.phone);
+        return;
+      }
+
+      // Valider la durée du stage si "Oui" est sélectionné
+      if (values.internship === 'Oui' && !values.internshipDuration) {
+        document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Veuillez sélectionner une durée pour le stage.</p>';
+        console.error('Durée du stage manquante');
+        return;
+      }
+
+      // Créer le message WhatsApp
+      const phoneNumber = '22891699261';
+      const whatsappMessage = `Nouvelle inscription:%0A*Nom*: ${encodeURIComponent(values.name)}%0A*Numéro de téléphone*: ${encodeURIComponent(values.phone)}%0A*Localisation*: ${encodeURIComponent(values.userLocation)}%0A*Moyen de paiement*: ${encodeURIComponent(values.paymentMethod)}%0A*Formation*: ${encodeURIComponent(values.formation)}%0A*Format*: ${encodeURIComponent(values.format)}%0A*Raison*: ${encodeURIComponent(values.reason)}%0A*Expérience*: ${encodeURIComponent(values.experience)}%0A*Stage de perfectionnement*: ${encodeURIComponent(values.internship)}${values.internship === 'Oui' ? `%0A*Durée du stage*: ${encodeURIComponent(values.internshipDuration)}` : ''}`;
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+      console.log('URL WhatsApp:', whatsappUrl);
+
+      // Rediriger vers WhatsApp
+      window.open(whatsappUrl, '_blank');
+
+      // Afficher un message de confirmation
+      document.getElementById('inscriptionResult').innerHTML = '<p class="text-success">Inscription envoyée vers WhatsApp !</p>';
+      form.reset();
+      internshipDurationContainer.style.display = 'none';
+    });
+  } else {
+    console.error("L'élément avec l'ID 'inscriptionForm' n'a pas été trouvé.");
+    document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Erreur: formulaire introuvable.</p>';
+  }
+} catch (error) {
+  console.error('Erreur dans le script du formulaire:', error);
+  document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Une erreur est survenue. Veuillez réessayer.</p>';
+}
+
+// Play Button Functionality for Videos
+document.querySelectorAll('.play-button').forEach(button => {
+  button.addEventListener('click', function() {
+    console.log('Bouton de lecture vidéo cliqué');
+    alert('La vidéo sera lue ici. Intégrez votre propre lecteur vidéo ou lien YouTube/TikTok.');
+  });
+});
+
+// Music Player Track Selection
+document.querySelectorAll('.track-item button').forEach((button, index) => {
+  button.addEventListener('click', function() {
+    console.log(`Piste ${index + 1} cliquée`);
+    const audioPlayer = document.querySelector('audio');
+    alert(`Piste ${index + 1} sélectionnée. Dans une implémentation réelle, la source audio changerait.`);
+  });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      console.log('Défilement vers:', targetId);
+      window.scrollTo({
+        top: targetElement.offsetTop - 70,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
     // WhatsApp Button Functionality
     document.querySelectorAll('.whatsapp-btn').forEach(button => {
       button.addEventListener('click', function() {
@@ -432,40 +657,143 @@
         window.open(whatsappUrl, '_blank');
       });
     });
+  //   document.getElementById('inscriptionForm').addEventListener('submit', function(event) {
+  //   event.preventDefault();
 
-    // Play Button Functionality for Videos
-    document.querySelectorAll('.play-button').forEach(button => {
-      button.addEventListener('click', function() {
-        // This would normally open a video player or redirect to a video
-        alert('La vidéo sera lue ici. Intégrez votre propre lecteur vidéo ou lien YouTube/TikTok.');
-      });
-    });
+  //   // Récupérer les valeurs du formulaire
+  //   const name = document.getElementById('inscriptionName').value;
+  //   const email = document.getElementById('inscriptionEmail').value;
+  //   const formation = document.getElementById('formation').value;
 
-    // Music Player Track Selection
-    document.querySelectorAll('.track-item button').forEach((button, index) => {
-      button.addEventListener('click', function() {
-        const audioPlayer = document.querySelector('audio');
-        // In a real implementation, you would change the audio source here
-        alert(`Piste ${index + 1} sélectionnée. Dans une implémentation réelle, la source audio changerait.`);
-      });
-    });
+  //   // Valider l'email
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   if (!regex.test(email)) {
+  //     document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Veuillez entrer un email valide.</p>';
+  //     return;
+  //   }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+  //   // Créer le message WhatsApp
+    const phoneNumber = '22891699261';
+    const whatsappMessage = `Nouvelle inscription:%0A*Nom*: ${encodeURIComponent(name)}%0A*Email*: ${encodeURIComponent(email)}%0A*Formation*: ${encodeURIComponent(formation)}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    // Rediriger vers WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+  //   // Afficher un message de confirmation
+  //   document.getElementById('inscriptionResult').innerHTML = '<p class="text-success">Inscription envoyée vers WhatsApp !</p>';
+  //   document.getElementById('inscriptionForm').reset();
+  // });
+
+  //  try {
+  //   // Gérer l'affichage conditionnel du champ de durée du stage
+  //   const internshipSelect = document.getElementById('internship');
+  //   const internshipDurationContainer = document.getElementById('internshipDurationContainer');
+  //   const internshipDuration = document.getElementById('internshipDuration');
+
+  //   if (internshipSelect) {
+  //     internshipSelect.addEventListener('change', function() {
+  //       if (this.value === 'Oui') {
+  //         internshipDurationContainer.style.display = 'block';
+  //         internshipDuration.setAttribute('required', 'required');
+  //       } else {
+  //         internshipDurationContainer.style.display = 'none';
+  //         internshipDuration.removeAttribute('required');
+  //         internshipDuration.value = '';
+  //       }
+  //     });
+  //   } else {
+  //     console.error("L'élément avec l'ID 'internship' n'a pas été trouvé.");
+  //   }
+
+  //   // Gérer la soumission du formulaire
+  //   const form = document.getElementById('inscriptionForm');
+  //   if (form) {
+  //     form.addEventListener('submit', function(event) {
+  //       event.preventDefault();
+  //       console.log('Formulaire soumis');
+
+  //       // Récupérer les valeurs des champs
+  //       const name = document.getElementById('inscriptionName').value;
+  //       const phone = document.getElementById('phone').value;
+  //       const location = document.getElementById('location').value;
+  //       const paymentMethod = document.getElementById('paymentMethod').value;
+  //       const formation = document.getElementById('formation').value;
+  //       const format = document.getElementById('format').value;
+  //       const reason = document.getElementById('reason').value;
+  //       const experience = document.getElementById('experience').value;
+  //       const internship = document.getElementById('internship').value;
+  //       const internshipDuration = document.getElementById('internshipDuration').value;
+
+  //       // // Valider le numéro de téléphone
+  //       // const phoneRegex = /\+?[0-9]{10,12}/;
+  //       // if (!phoneRegex.test(phone)) {
+  //       //   document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Veuillez entrer un numéro de téléphone valide.</p>';
+  //       //   console.error('Numéro de téléphone invalide:', phone);
+  //       //   return;
+  //       // }
+
+  //       // Valider la durée du stage si "Oui" est sélectionné
+  //       if (internship === 'Oui' && !internshipDuration) {
+  //         document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Veuillez sélectionner une durée pour le stage.</p>';
+  //         console.error('Durée du stage manquante');
+  //         return;
+  //       }
+
+  //       // Créer le message WhatsApp
+  //       const phoneNumber = '22891699261';
+  //       const whatsappMessage = `Nouvelle inscription:%0A*Nom*: ${encodeURIComponent(name)}%0A*Numéro de téléphone*: ${encodeURIComponent(phone)}%0A*Localisation*: ${encodeURIComponent(userLocation)}%0A*Moyen de paiement*: ${encodeURIComponent(paymentMethod)}%0A*Formation*: ${encodeURIComponent(formation)}%0A*Format*: ${encodeURIComponent(format)}%0A*Raison*: ${encodeURIComponent(reason)}%0A*Expérience*: ${encodeURIComponent(experience)}%0A*Stage de perfectionnement*: ${encodeURIComponent(internship)}${internship === 'Oui' ? `%0A*Durée du stage*: ${encodeURIComponent(internshipDuration)}` : ''}`;
+  //       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+  //       // console.log('Message WhatsApp:', whatsappMessage);
+
+  //       // Rediriger vers WhatsApp
+  //       window.open(whatsappUrl, '_blank');
+
+  //       // Afficher un message de confirmation
+  //   document.getElementById('inscriptionResult').innerHTML = '<p class="text-success">Inscription envoyée vers WhatsApp !</p>';
+  //   document.getElementById('inscriptionForm').reset();
+  // });
+  //   } else {
+  //     console.error("L'élément avec l'ID 'inscriptionForm' n'a pas été trouvé.");
+  //   }
+  // } catch (error) {
+  //   console.error('Erreur dans le script du formulaire:', error);
+  //   document.getElementById('inscriptionResult').innerHTML = '<p class="text-danger">Une erreur est survenue. Veuillez réessayer.</p>';
+  // }
+  //   // Play Button Functionality for Videos
+  //   document.querySelectorAll('.play-button').forEach(button => {
+  //     button.addEventListener('click', function() {
+  //       // This would normally open a video player or redirect to a video
+  //       alert('La vidéo sera lue ici. Intégrez votre propre lecteur vidéo ou lien YouTube/TikTok.');
+  //     });
+  //   });
+
+  //   // Music Player Track Selection
+  //   document.querySelectorAll('.track-item button').forEach((button, index) => {
+  //     button.addEventListener('click', function() {
+  //       const audioPlayer = document.querySelector('audio');
+  //       // In a real implementation, you would change the audio source here
+  //       alert(`Piste ${index + 1} sélectionnée. Dans une implémentation réelle, la source audio changerait.`);
+  //     });
+  //   });
+
+  //   // Smooth scrolling for anchor links
+  //   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //     anchor.addEventListener('click', function(e) {
+  //       e.preventDefault();
+  //       const targetId = this.getAttribute('href');
+  //       if (targetId === '#') return;
         
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
+  //       const targetElement = document.querySelector(targetId);
+  //       if (targetElement) {
+  //         window.scrollTo({
+  //           top: targetElement.offsetTop - 70,
+  //           behavior: 'smooth'
+  //         });
+  //       }
+  //     });
+  //   });
   </script>
 </body>
 </html>
