@@ -23,6 +23,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#about">À propos</a>
           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#mission">Notre Mission</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#realisation">Nos Réalisations</a>
           </li>
@@ -33,7 +36,7 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
-        <button class="btn btn-blue ms-lg-3" > <a href="#contact1">S'inscrire</a> </button>
+        <button class="btn btn-white ms-lg-3" > <a href="#contact1">S'inscrire</a> </button>
       </div>
     </div>
   </nav>
@@ -121,7 +124,7 @@
                   <span>Places limitées à <strong>15 personnes</strong></span>
                 </li>
               </ul>
-              <button class="btn btn-blue w-100 whatsapp-btn" data-message="Je souhaite m'inscrire à la formation du 16 Février au 16 Mars 2025">
+              <button class="btn btn-blue w-100 whatsapp-btn" data-message="Je souhaite m'inscrire à la formation du 12 Juillet au 10 Aout 2025">
                 <i class="bi bi-chat-dots me-2"></i> S'inscrire via WhatsApp
               </button>
             </div>
@@ -145,26 +148,27 @@
     </div>
   </section>
 
-  <section id="mission" class="py-2 bg-light">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h2 class="fw-bold mb-4"  style="color:blue; font-size:xx-large; font-weight: bold; text-decoration: underline;">Notre Mission</h2>
-          <p class="text-muted mb-4"> <span class="text-orange" style="color: var(--orange-primary); font-size: larger; font-weight: bold;"> Inspirer l’innovation, valoriser l’écologie </span> et <span class="text-orange" style="color: var(--orange-primary); font-size: 1.2rem; font-weight: bold;">autonomiser</span> les artisanes grâce à leur passion, en intégrant des formations en marketing et digital pour une visibilité accrue.</p>
-        </div>
+  <section class="py-3 bg-light">
+  <div class="container">
+    <div class="row align-items-start g-5">
+      <div class="col-lg-6" id="mission">
+        <h2 class="fw-bold mb-4" style="color:blue; font-size:xx-large; font-weight: bold; text-decoration: underline;">Notre Mission</h2>
+        <p class="text-muted mb-4">
+          <span class="text-orange" style="color: var(--orange-primary); font-size: larger; font-weight: bold;">Inspirer l’innovation, valoriser l’écologie</span> et
+          <span class="text-orange" style="color: var(--orange-primary); font-size: 1.2rem; font-weight: bold;">autonomiser</span> les artisanes grâce à leur passion, en intégrant des formations en marketing et digital pour une visibilité accrue.
+        </p>
+      </div>
+      <div class="col-lg-6" id="realisation">
+        <h2 class="fw-bold mb-4" style="color:blue; font-size:xx-large; font-weight: bold; text-decoration: underline;">Nos Réalisations</h2>
+        <p class="text-muted mb-4">
+          Avec <span class="text-orange" style="color: var(--orange-primary); font-size: larger; font-weight: bold;">382 jeunes et femmes</span> formées dans des villes comme
+          <span class="text-orange" style="color: var(--orange-primary); font-size: 1.2rem; font-weight: bold;">Lomé, Kara, Kpalimé et Aného</span>, et dans
+          <span class="text-orange" style="color: var(--orange-primary); font-size: larger; font-weight: bold;">11 autres pays</span> via nos formations en ligne, notre centre combine créativité artisanale et outils modernes pour favoriser l’insertion professionnelle. Notre mission : encourager l’innovation, promouvoir l’écologie et permettre aux artisanes de vivre de leur passion.
+        </p>
       </div>
     </div>
-  </section>
-  <section id="realisation" class="py-3 bg-light">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h2 class="fw-bold mb-4" style="color:blue; font-size:xx-large; font-weight: bold; text-decoration: underline;">Nos Réalisations</h2>
-          <p class="text-muted mb-4">Avec <span class="text-orange" style="color: var(--orange-primary); font-size: larger; font-weight: bold;">382 jeunes et femmes</span> formées dans des villes comme <span class="text-orange" style="color: var(--orange-primary); font-size: 1.2rem; font-weight: bold;">Lomé, Kara, Kpalimé et Aného</span>, et dans <span class="text-orange" style="color: var(--orange-primary); font-size: larger; font-weight: bold;">11 autres pays</span> via nos formations en ligne, notre centre combine créativité artisanale et outils modernes pour favoriser l’insertion professionnelle. Notre mission : encourager l’innovation, promouvoir l’écologie et permettre aux artisanes de vivre de leur passion.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <section id="gallery" class="py-3">
     <div class="container">
@@ -378,131 +382,198 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Configuration de Lightbox2
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true,
-      'albumLabel': 'Image %1 sur %2'
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Configuration de Lightbox2
+try {
+  console.log('Initialisation de Lightbox');
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true,
+    'albumLabel': 'Image %1 sur %2'
+  });
+} catch (error) {
+  console.error('Erreur lors de l\'initialisation de Lightbox:', error);
+}
+
+// Fonctionnalité des boutons WhatsApp pour les formations
+try {
+  console.log('Recherche des boutons .whatsapp-btn');
+  const whatsappButtons = document.querySelectorAll('.whatsapp-btn');
+  console.log('Boutons trouvés:', whatsappButtons.length);
+  
+  whatsappButtons.forEach((button, index) => {
+    button.addEventListener('click', function () {
+      console.log(`Clic sur le bouton WhatsApp #${index + 1}`);
+      const message = this.getAttribute('data-message');
+      console.log('Message:', message);
+      
+      if (!message) {
+        console.error('Erreur: data-message manquant pour le bouton #', index + 1);
+        return;
+      }
+      
+      const phoneNumber = '22891699261';
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      console.log('URL WhatsApp:', whatsappUrl);
+      window.open(whatsappUrl, '_blank');
     });
+  });
+} catch (error) {
+  console.error('Erreur dans le script des boutons WhatsApp:', error);
+}
 
-    // Fonctionnalité des boutons WhatsApp
-    document.querySelectorAll('.whatsapp-btn').forEach(button => {
-      button.addEventListener('click', function () {
-        const message = this.getAttribute('data-message');
-        const phoneNumber = '22891699261';
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-      });
-    });
+// Fonctionnalité du formulaire d'inscription
+try {
+  console.log('Initialisation du formulaire d\'inscription');
+  const form = document.getElementById('inscriptionForm');
+  const internshipSelect = document.getElementById('internship');
+  const internshipDurationContainer = document.getElementById('internshipDurationContainer');
+  const internshipDuration = document.getElementById('internshipDuration');
+  const inscriptionResult = document.getElementById('inscriptionResult');
 
-    // Fonctionnalité du formulaire d'inscription
-    const form = document.getElementById('inscriptionForm');
-    const internshipSelect = document.getElementById('internship');
-    const internshipDurationContainer = document.getElementById('internshipDurationContainer');
-    const internshipDuration = document.getElementById('internshipDuration');
-    const inscriptionResult = document.getElementById('inscriptionResult');
-
-    if (internshipSelect && internshipDurationContainer && internshipDuration) {
-      internshipSelect.addEventListener('change', function () {
-        if (this.value === 'Oui') {
-          internshipDurationContainer.style.display = 'block';
-          internshipDuration.setAttribute('required', 'required');
-        } else {
-          internshipDurationContainer.style.display = 'none';
-          internshipDuration.removeAttribute('required');
-          internshipDuration.value = '';
-        }
-      });
-    }
-
-    if (form) {
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        const fields = {
-          name: document.getElementById('inscriptionName'),
-          phone: document.getElementById('phone'),
-          userLocation: document.getElementById('userLocation'),
-          paymentMethod: document.getElementById('paymentMethod'),
-          formation: document.getElementById('formation'),
-          format: document.getElementById('format'),
-          reason: document.getElementById('reason'),
-          experience: document.getElementById('experience'),
-          internship: document.getElementById('internship'),
-          internshipDuration: document.getElementById('internshipDuration'),
-        };
-
-        for (const [key, element] of Object.entries(fields)) {
-          if (!element) {
-            inscriptionResult.innerHTML = `<p class="text-danger">Erreur: le champ ${key} est introuvable.</p>`;
-            return;
-          }
-        }
-
-        const values = {
-          name: fields.name.value,
-          phone: fields.phone.value,
-          userLocation: fields.userLocation.value,
-          paymentMethod: fields.paymentMethod.value,
-          formation: fields.formation.value,
-          format: fields.format.value,
-          reason: fields.reason.value,
-          experience: fields.experience.value,
-          internship: fields.internship.value,
-          internshipDuration: fields.internshipDuration.value,
-        };
-
-        const requiredFields = ['name', 'phone', 'userLocation', 'paymentMethod', 'formation', 'format', 'reason', 'experience', 'internship'];
-        for (const field of requiredFields) {
-          if (!values[field]) {
-            inscriptionResult.innerHTML = `<p class="text-danger">Veuillez remplir le champ ${field}.</p>`;
-            return;
-          }
-        }
-
-        const phoneRegex = /\+?[0-9]{10,12}/;
-        if (!phoneRegex.test(values.phone)) {
-          inscriptionResult.innerHTML = '<p class="text-danger">Veuillez entrer un numéro de téléphone valide.</p>`;
-          return;
-        }
-
-        if (values.internship === 'Oui' && !values.internshipDuration) {
-          inscriptionResult.innerHTML = '<p class="text-danger">Veuillez sélectionner une durée pour le stage.</p>`;
-          return;
-        }
-
-        const phoneNumber = '22891699261';
-        const whatsappMessage = `Nouvelle inscription:%0A*Nom*: ${encodeURIComponent(values.name)}%0A*Numéro de téléphone*: ${encodeURIComponent(values.phone)}%0A*Localisation*: ${encodeURIComponent(values.userLocation)}%0A*Moyen de paiement*: ${encodeURIComponent(values.paymentMethod)}%0A*Formation*: ${encodeURIComponent(values.formation)}%0A*Format*: ${encodeURIComponent(values.format)}%0A*Raison*: ${encodeURIComponent(values.reason)}%0A*Expérience*: ${encodeURIComponent(values.experience)}%0A*Stage de perfectionnement*: ${encodeURIComponent(values.internship)}${values.internship === 'Oui' ? `%0A*Durée du stage*: ${encodeURIComponent(values.internshipDuration)}` : ''}`;
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-        window.open(whatsappUrl, '_blank');
-
-        inscriptionResult.innerHTML = '<p class="text-success">Inscription envoyée vers WhatsApp !</p>';
-        form.reset();
+  if (internshipSelect && internshipDurationContainer && internshipDuration) {
+    console.log('Éléments du stage trouvés');
+    internshipSelect.addEventListener('change', function () {
+      console.log('Changement dans internship:', this.value);
+      if (this.value === 'Oui') {
+        internshipDurationContainer.style.display = 'block';
+        internshipDuration.setAttribute('required', 'required');
+      } else {
         internshipDurationContainer.style.display = 'none';
-      });
-    } else {
+        internshipDuration.removeAttribute('required');
+        internshipDuration.value = '';
+      }
+    });
+  } else {
+    console.error('Éléments manquants: internship=', !!internshipSelect, 'internshipDurationContainer=', !!internshipDurationContainer, 'internshipDuration=', !!internshipDuration);
+  }
+
+  if (form && inscriptionResult) {
+    console.log('Formulaire trouvé');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      console.log('Soumission du formulaire');
+
+      const fields = {
+        name: document.getElementById('inscriptionName'),
+        phone: document.getElementById('phone'),
+        userLocation: document.getElementById('userLocation'),
+        paymentMethod: document.getElementById('paymentMethod'),
+        formation: document.getElementById('formation'),
+        format: document.getElementById('format'),
+        reason: document.getElementById('reason'),
+        experience: document.getElementById('experience'),
+        internship: document.getElementById('internship'),
+        internshipDuration: document.getElementById('internshipDuration'),
+      };
+
+      for (const [key, element] of Object.entries(fields)) {
+        if (!element) {
+          console.error(`Champ ${key} manquant`);
+          inscriptionResult.innerHTML = `<p class="text-danger">Erreur: le champ ${key} est introuvable.</p>`;
+          return;
+        }
+      }
+
+      const values = {
+        name: fields.name.value,
+        phone: fields.phone.value,
+        userLocation: fields.userLocation.value,
+        paymentMethod: fields.paymentMethod.value,
+        formation: fields.formation.value,
+        format: fields.format.value,
+        reason: fields.reason.value,
+        experience: fields.experience.value,
+        internship: fields.internship.value,
+        internshipDuration: fields.internshipDuration.value,
+      };
+      console.log('Valeurs des champs:', values);
+
+      const requiredFields = ['name', 'phone', 'userLocation', 'paymentMethod', 'formation', 'format', 'reason', 'experience', 'internship'];
+      for (const field of requiredFields) {
+        if (!values[field]) {
+          console.error(`Champ requis vide: ${field}`);
+          inscriptionResult.innerHTML = `<p class="text-danger">Veuillez remplir le champ ${field}.</p>`;
+          return;
+        }
+      }
+
+      const phoneRegex = /\+?[0-9]{10,12}/;
+      if (!phoneRegex.test(values.phone)) {
+        console.error('Numéro de téléphone invalide:', values.phone);
+        inscriptionResult.innerHTML = '<p class="text-danger">Veuillez entrer un numéro de téléphone valide.</p>';
+        return;
+      }
+
+      if (values.internship === 'Oui' && !values.internshipDuration) {
+        console.error('Durée du stage manquante');
+        inscriptionResult.innerHTML = '<p class="text-danger">Veuillez sélectionner une durée pour le stage.</p>';
+        return;
+      }
+
+      const phoneNumber = '22891699261';
+      const whatsappMessage = `Nouvelle inscription:%0A*Nom*: ${encodeURIComponent(values.name)}%0A*Numéro de téléphone*: ${encodeURIComponent(values.phone)}%0A*Localisation*: ${encodeURIComponent(values.userLocation)}%0A*Moyen de paiement*: ${encodeURIComponent(values.paymentMethod)}%0A*Formation*: ${encodeURIComponent(values.formation)}%0A*Format*: ${encodeURIComponent(values.format)}%0A*Raison*: ${encodeURIComponent(values.reason)}%0A*Expérience*: ${encodeURIComponent(values.experience)}%0A*Stage de perfectionnement*: ${encodeURIComponent(values.internship)}${values.internship === 'Oui' ? `%0A*Durée du stage*: ${encodeURIComponent(values.internshipDuration)}` : ''}`;
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+      console.log('URL WhatsApp du formulaire:', whatsappUrl);
+      window.open(whatsappUrl, '_blank');
+
+      inscriptionResult.innerHTML = '<p class="text-success">Inscription envoyée vers WhatsApp !</p>';
+      form.reset();
+      internshipDurationContainer.style.display = 'none';
+    });
+  } else {
+    console.error('Formulaire ou inscriptionResult manquant: form=', !!form, 'inscriptionResult=', !!inscriptionResult);
+    if (inscriptionResult) {
       inscriptionResult.innerHTML = '<p class="text-danger">Erreur: formulaire introuvable.</p>';
     }
+  }
+} catch (error) {
+  console.error('Erreur dans le script du formulaire:', error);
+  if (inscriptionResult) {
+    inscriptionResult.innerHTML = '<p class="text-danger">Une erreur est survenue. Veuillez réessayer.</p>';
+  }
+}
 
-    // Défilement fluide pour les liens d'ancrage
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
 
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 70,
-            behavior: 'smooth',
-          });
-        }
-      });
+// Défilement fluide pour les liens d'ancrage
+try {
+  console.log('Configuration du défilement fluide');
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      console.log('Clic sur lien d\'ancrage:', targetId);
+      if (targetId === '#') return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Calculer la hauteur de la barre de navigation
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        console.log('Hauteur de la navbar:', navbarHeight);
+
+        // Obtenir le padding-top de la section cible
+        const targetPaddingTop = parseFloat(window.getComputedStyle(targetElement).paddingTop) || 0;
+        console.log('Padding-top de la cible:', targetPaddingTop);
+
+        // Calculer la position cible
+        const targetPosition = targetElement.offsetTop - navbarHeight - targetPaddingTop;
+        console.log('Position cible calculée:', targetPosition);
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      } else {
+        console.error('Cible non trouvée:', targetId);
+      }
     });
-  </script>
+  });
+} catch (error) {
+  console.error('Erreur dans le script de défilement:', error.message);
+}
+</script>
 </body>
 </html>
